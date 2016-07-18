@@ -9,8 +9,7 @@ angular
   ])
 function ProfilesShowFunction($stateParams){
   console.log("show page")
-  profile = this;
-  conosole.log(profile)
+
 }
 
 

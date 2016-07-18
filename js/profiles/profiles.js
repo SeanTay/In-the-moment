@@ -1,7 +1,9 @@
+"use strict";
 
-
+(function(){
 angular
   .module("profiles", [
-    fromJson(profile.data.json)
-
+    "ngResource"
   ])
+
+}());
