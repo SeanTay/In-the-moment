@@ -16,9 +16,13 @@
 
 <h2>Add moments</h2>
 
+<div data-ng-repeat = "story in ProfileShowViewModel.stories | orderBy: '-created_at'">
+  {{story.content}}
+</div>
+
 <form name="momentsForm" ng-submit="MomentsNewController()">
-  <input placeholder="Share your moment" data-ng-model="StoryNewViewModel.profile.comment" />
-  <button type="button" data-ng-click="storyNewViewModel.create()">Create</button>
+  <input placeholder="Share your moment" data-ng-model="ProfileShowViewModel.story.content" />
+  <button type="button" data-ng-click="ProfileShowViewModel.create()">Create</button>
 </form>
 
 
