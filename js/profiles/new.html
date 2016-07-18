@@ -1,6 +1,6 @@
 <h2>Create Profile</h2>
 
-<form>
+<form name="profileForm" ng-submit="ProfileNewController()">
   <input placeholder="Name" data-ng-model="ProfileNewViewModel.profile.name" />
   <input placeholder="Gender" data-ng-model="ProfileNewViewModel.profile.gender" />
   <input placeholder="Age" data-ng-model="profileNewViewModel.profile.age" />

@@ -1,10 +1,26 @@
 <h1> show page </h1>
 
-<p>{{ProfileShowViewModel.profile.name}}</p>
-hi
+<h2>{{ProfileShowViewModel.profile.name}}</h2>
+<p>{{ProfileShowViewModel.profile.gender}}</p>
+<p>{{ProfileShowViewModel.profile.age}}</p>
+<p>{{ProfileShowViewModel.profile.location}}</p>
+<p>{{ProfileShowViewModel.profile.work}}</p>
+<p>{{ProfileShowViewModel.profile.desription}}</p>
+<img data-ng-src={{ProfileShowViewModel.profile.profile_pic_url}}>
 
-<h2> Add moments </h2>
+<h2>Momements</h2>
+<p>**LIST OF MOMENTS WILL GO HERE** </p>
 
-<p>{{StoriesShowViewModel.profile.name}}</p>
+
+
+
+<h2>Add moments</h2>
+
+<form name="momentsForm" ng-submit="MomentsNewController()">
+  <input placeholder="Share your moment" data-ng-model="StoryNewViewModel.profile.comment" />
+  <button type="button" data-ng-click="storyNewViewModel.create()">Create</button>
+</form>
+
+
 
 <!-- add edit ability here -->
