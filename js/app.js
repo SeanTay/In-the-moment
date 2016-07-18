@@ -12,6 +12,10 @@ angular
 
 function RouterFunction($stateProvider){
   $stateProvider
+    .state("WelcomePage", {
+      url: "",
+      templateUrl: "welcome.html"
+    })
     .state("ProfileShow", {
       url: "/profiles/:id",
       templateUrl: "js/profiles/show.html",
