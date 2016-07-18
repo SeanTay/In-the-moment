@@ -10,12 +10,14 @@ angular
   ])
 
 function ProfileShowFunction(ProfileFactory, $stateParams){
-  console.log("profile function");
   this.profile = ProfileFactory.get({id: $stateParams.id});
-      console.log(this.profile);
-    console.log ("{{ProfileShowViewModel.profile.name}}")
-
+  this.story = ProfileFactory.get({id: $stateParams.id});
 }
+
+function StoriesShowFunction(){
+  console.log("stories")
+}
+
 
 
 }())
