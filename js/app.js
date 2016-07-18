@@ -1,14 +1,14 @@
 "use strict";
 
 (function(){
-angular
+  angular
   .module("datingApp", [
     "ui.router",
     "profiles"
   ])
   .config(["$stateProvider",
-    RouterFunction
-  ])
+  RouterFunction
+])
 
 function RouterFunction($stateProvider){
   $stateProvider
@@ -18,6 +18,17 @@ function RouterFunction($stateProvider){
       controller: "ProfileShowController",
       controllerAs: "ProfileShowViewModel"
     })
-  };
-
+    .state("StoriesNew", {
+      url: "/profiles/:profile_id/stories/new",
+      templateUrl: "js/profiles/stories.new.controller.js",
+      controller: "StoriesNewController",
+      controllerAs: "StoriesNewViewModel"
+    })
+  .state("ProfileNew", {
+    url: "/profiles/new",
+    templateUrl: "js/profiles/new.html",
+    controller: "ProfileNewController",
+    controllerAs: "ProfileNewViewModel"
+  })
+};
 }());

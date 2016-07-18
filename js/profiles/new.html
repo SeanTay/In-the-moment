@@ -1,0 +1,13 @@
+<h2>Create Profile</h2>
+
+<form name="profileForm" ng-submit="ProfileNewController()">
+  <input placeholder="Name" data-ng-model="ProfileNewViewModel.profile.name" />
+  <input placeholder="Gender" data-ng-model="ProfileNewViewModel.profile.gender" />
+  <input placeholder="Age" data-ng-model="profileNewViewModel.profile.age" />
+  <input placeholder="Location" data-ng-model="profileNewViewModel.profile.location" />
+  <input placeholder="Work" data-ng-model="profileNewViewModel.profile.work" />
+  <input placeholder="School" data-ng-model="profileNewViewModel.profile.school" />
+  <input placeholder="Description" data-ng-model="profileNewViewModel.profile.description" />
+  <input placeholder="Photo URL" data-ng-model="profileNewViewModel.profile.photoUrl" />
+  <button type="button" data-ng-click="profileNewViewModel.create()">Create</button>
+</form>
