@@ -18,6 +18,11 @@ function RouterFunction($stateProvider){
       controller: "ProfileShowController",
       controllerAs: "ProfileShowViewModel"
     })
+    .state("profileNew", {
+      url: "/profiles/new",
+      templateUrl: "js/profiles/new.html",
+      controller: "ProfileNewController",
+      controllerAs: "ProfileNewViewModel"
   };
-
+}
 }());
