@@ -6,11 +6,11 @@ angular
     "ui.router",
     "profiles"
   ])
-  .config("$stateProvider",[
-    Router
+  .config(["$stateProvider",
+    RouterFunction
   ])
 
-function Router($stateProvider){
+function RouterFunction($stateProvider){
   $stateProvider
     .state("ShowController", {
       url: "/profiles/:id",
@@ -20,4 +20,4 @@ function Router($stateProvider){
     })
   };
 
-}())
+}());

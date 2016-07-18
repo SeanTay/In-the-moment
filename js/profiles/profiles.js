@@ -1,9 +1,6 @@
 "use strict";
 
 (function(){
-angular
-  .module("profiles", [
-    "ngResource"
-  ])
-
+  angular
+    .module("profiles", ["ngResource"])
 }());

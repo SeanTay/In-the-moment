@@ -3,11 +3,10 @@
 (function(){
 angular
   .module("profiles")
-  .controller("ProfileShowController", [
-    "$stateParams",
-    ProfilesShowFunction
-  ])
-function ProfilesShowFunction($stateParams){
+  .controller("ProfileShowController", ["ProfileFactory",
+    "$stateParams", "$state", ProfileShowFunction]);
+
+function ProfileShowFunction(ProfileFactory, $stateParams, $state){
   console.log("show page")
 
 }
