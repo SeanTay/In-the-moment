@@ -7,16 +7,17 @@ angular
     "profiles"
   ])
   .config(["$stateProvider",
-  Router])
+    RouterFunction
+  ])
 
-function Router($stateProvider){
+function RouterFunction($stateProvider){
   $stateProvider
-    .state("ShowController", {
-      url: "/profile/:id",
+    .state("ProfileShow", {
+      url: "/profiles/:id",
       templateUrl: "js/profiles/show.html",
       controller: "ProfileShowController",
       controllerAs: "ProfileShowViewModel"
     })
   };
 
-}())
+}());

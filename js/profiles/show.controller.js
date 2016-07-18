@@ -13,6 +13,7 @@ function ProfileShowFunction(ProfileFactory, $stateParams){
   console.log("profile function");
   this.profile = ProfileFactory.get({id: $stateParams.id});
       console.log(this.profile);
+    console.log ("{{ProfileShowViewModel.profile.name}}")
 
 }
 
