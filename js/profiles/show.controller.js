@@ -4,11 +4,15 @@
 angular
   .module("profiles")
   .controller("ProfileShowController", [
+    "ProfileFactory",
     "$stateParams",
-    ProfilesShowFunction
+    ProfileShowFunction
   ])
-function ProfilesShowFunction($stateParams){
-  console.log("show page")
+
+function ProfileShowFunction(ProfileFactory, $stateParams){
+  console.log("profile function");
+  this.profile = ProfileFactory.get({id: $stateParams.id});
+      console.log(this.profile);
 
 }
 

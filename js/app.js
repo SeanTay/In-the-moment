@@ -10,10 +10,9 @@ angular
   Router])
 
 function Router($stateProvider){
-  console.log("hi")
   $stateProvider
     .state("ShowController", {
-      url: "/profiles/:id",
+      url: "/profile/:id",
       templateUrl: "js/profiles/show.html",
       controller: "ProfileShowController",
       controllerAs: "ProfileShowViewModel"
