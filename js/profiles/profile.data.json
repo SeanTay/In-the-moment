@@ -1,6 +1,6 @@
 [{"name": "Sean Tay" ,
-"sex": "Male",
-"age": "30",
+"gender": "Male",
+"age": 30,
 "location": "Washington, DC" ,
 "work": "General Assembly",
 "school": "North Carolina State University",
@@ -8,8 +8,8 @@
 "profile_pic_url": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAeuAAAAJDk3MWE0MDQwLWM0MjMtNDJhOC05OTJlLWE4YzNmOTQyZDM4MQ.jpg"
 }, {
 "name": "Taylor Swift",
-"sex": "Female",
-"age": "26",
+"gender": "Female",
+"age": 26,
 "location": "New York",
 "work": "RCA",
 "school": "School of Music",
