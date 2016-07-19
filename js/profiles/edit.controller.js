@@ -16,5 +16,12 @@
           $state.go("ProfileShow",{},{reload:true})
         })
       }
+
+      this.destroy = function(){
+        this.profile.$delete({id: $stateParams.id}).then(function(){
+          $state.go("ProfileShow",{},{reload:true})
+        })
+
+      }
     }
 }());
