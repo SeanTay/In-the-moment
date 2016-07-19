@@ -1,5 +1,11 @@
 
 
+Tues:
+* comment css boxes
+* timestamps angular
+* search feature
+
+
 Monday:
 * working prototype of angular, not connected using seed JSON data
 * put waterfall video on welcome page
