@@ -1,12 +1,12 @@
-<h2>{{ProfileShowViewModel.profile.name}}</h2>
 <div class="card_panel hoverable">
 <div class="col s12 m2">
 <p class="z-depth-3 flow-text">
+  <h3>{{ProfileShowViewModel.profile.name}}, {{ProfileShowViewModel.profile.age}}</h3>
+  <h5>{{ProfileShowViewModel.profile.location}}</h5>
+  <p>{{ProfileShowViewModel.profile.school}}</p>
+  <p>{{ProfileShowViewModel.profile.work}}</p>
 
-  <h4>{{ProfileShowViewModel.profile.age}}</h4>
-  <h4>{{ProfileShowViewModel.profile.location}}</h4>
-  <h4>{{ProfileShowViewModel.profile.work}}</h4>
-  <h4>{{ProfileShowViewModel.profile.desription}}</h4>
+  <h6>About me: {{ProfileShowViewModel.profile.desription}}</h6>
   <img class="circle responsive img" data-ng-src={{ProfileShowViewModel.profile.profile_pic_url}}>
     </div>
 </p>

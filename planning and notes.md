@@ -1,11 +1,6 @@
 
 
 Tues:
-Show page layout:
-name ,age
-location
-edu work **smaller font**
-description
 radio css: add edit button into box
 
 
