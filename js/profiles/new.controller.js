@@ -8,10 +8,13 @@
       ProfileNewControllerFunction
     ]);
 
-    function ProfileNewControllerFunction( ProfileFactory ){
+    function ProfileNewControllerFunction(ProfileFactory){
+
       this.profile = new ProfileFactory();
+
       this.create = function(){
         this.profile.$save()
+        console.log("creating a profile")
       }
     }
 }());
