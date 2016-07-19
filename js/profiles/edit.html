@@ -1,0 +1,15 @@
+<h2>Edit Profiles</h2>
+
+
+
+<form name="profileForm" ng-submit="ProfileEditController()">
+  <p>Name: <input value="ProfileEditViewModel.profile.name" data-ng-model="ProfileEditViewModel.profile.name" /></p>
+  <p>Gender: <input value="ProfileEditViewModel.profile.gender" data-ng-model="ProfileEditViewModel.profile.gender" /></p>
+  <p>Age: <input value="ProfileEditViewModel.profile.age" data-ng-model="ProfileEditViewModel.profile.age" /> </p>
+  <p>Location: <input value="ProfileEditViewModel.profile.location" data-ng-model="ProfileEditViewModel.profile.location" /> </p>
+  <p>Work: <input value="ProfileEditViewModel.profile.work" data-ng-model="ProfileEditViewModel.profile.work" /> </p>
+  <p>School: <input value="ProfileEditViewModel.profile.school" data-ng-model="ProfileEditViewModel.profile.school" /> </p>
+  <p>Description: <input value="ProfileEditViewModel.profile.description" data-ng-model="ProfileEditViewModel.profile.description" /> </p>
+  <p>Photo Url: <input value="ProfileEditViewModel.profile.profile_pic_url" data-ng-model="ProfileEditViewModel.profile.profile_pic_url" /></p>
+  <button type="button" data-ng-click="ProfileEditViewModel.update()">Update</button>
+</form>
