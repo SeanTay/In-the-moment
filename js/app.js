@@ -14,7 +14,9 @@ function RouterFunction($stateProvider){
   $stateProvider
     .state("WelcomePage", {
       url: "",
-      templateUrl: "welcome.html"
+      templateUrl: "welcome.html",
+      controller: "WelcomeController",
+      controllerAs: "WelcomeControllerViewModel"
     })
   .state("ProfileNew", {
     url: "/profiles/new",

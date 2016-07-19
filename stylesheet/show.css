@@ -9,3 +9,8 @@ html {
   margin-top: 20px;
   padding: 10px;
 }
+
+.circle.responsive.img {
+  height: 300px;
+  width: 300px;
+}
