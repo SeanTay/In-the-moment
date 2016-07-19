@@ -21,7 +21,6 @@
 
     this.create = function(){
       this.story.$save({id: $stateParams.id}).then(function(){
-        console.log('saving')
         $state.go("ProfileShow", {}, {reload:true});
       })
     }

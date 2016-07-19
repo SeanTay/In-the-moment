@@ -1,11 +1,8 @@
-<h1> show page </h1>
-
 <h2>{{ProfileShowViewModel.profile.name}}</h2>
 <div class="card_panel hoverable">
 <div class="col s12 m2">
-<p class="z-depth-3">
+<p class="z-depth-3 flow-text">
 
-  <h4>{{ProfileShowViewModel.profile.gender}}</lh4>
   <h4>{{ProfileShowViewModel.profile.age}}</h4>
   <h4>{{ProfileShowViewModel.profile.location}}</h4>
   <h4>{{ProfileShowViewModel.profile.work}}</h4>
@@ -17,14 +14,16 @@
 </div>
 
 <h2>Momements</h2>
-<div class="card_panel hoverable">
-<div class="col s12 m2">
-<p class="z-depth-3">
 <div data-ng-repeat = "story in ProfileShowViewModel.stories | orderBy: '-created_at'">
+  <div class="card_panel #ffb74d orange lighten-2 hoverable">
+  <div class="col s12 m2">
+  <p class="z-depth-3">
   <p>{{story.content}}</p>
-  <p>Lasy updated: {{story.updated_at}}</p>
-</p>
-</div>
+  <span ng-bind> {{story.updated_at | date:'medium'}}</span>
+    <span>Last Updated: {{story.updated_at | date:'medium'}}</span></br>
+  </p>
+  </div>
+  </div>
 </div>
 
 <h2>Add moments</h2>

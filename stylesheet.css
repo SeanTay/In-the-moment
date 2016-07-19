@@ -1,14 +1,11 @@
 
+html {
+  padding: 10px;
+}
 
 .card_panel.hoverable {
   margin-left: 20px;
   margin-right: 80px;
-  padding: 30px;
-}
-
-
-
-h2 {
-  color: blue;
-
+  margin-top: 20px;
+  padding: 10px;
 }
