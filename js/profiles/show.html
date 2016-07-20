@@ -1,37 +1,45 @@
+
 <auth-nav></auth-nav>
 
-<h1> show page </h1>
+<link rel="stylesheet" type="text/css" href="stylesheet/show.css">
 
-<h2>{{ProfileShowViewModel.profile.name}}</h2>
-<p>{{ProfileShowViewModel.profile.gender}}</p>
-<p>{{ProfileShowViewModel.profile.age}}</p>
-<p>{{ProfileShowViewModel.profile.location}}</p>
-<p>{{ProfileShowViewModel.profile.work}}</p>
-<p>{{ProfileShowViewModel.profile.desription}}</p>
-<img data-ng-src={{ProfileShowViewModel.profile.profile_pic_url}}>
+<div class="show container">
+  <div class="card_panel hoverable">
+    <div class="col s12 m2 mainprofile">
+      <img class="circle responsive img" data-ng-src={{ProfileShowViewModel.profile.profile_pic_url}}>
+      <p class="z-depth-3 flow-text">
+        <h3>{{ProfileShowViewModel.profile.name}}, {{ProfileShowViewModel.profile.age}}</h3>
+        <h5>{{ProfileShowViewModel.profile.location}}</h5>
 
-<h2>Momements</h2>
-<p>**LIST OF MOMENTS WILL GO HERE** </p>
+        <p>{{ProfileShowViewModel.profile.school}}</p>
+        <p>{{ProfileShowViewModel.profile.work}}</p>
 
+        <h6>About me: {{ProfileShowViewModel.profile.desription}}</h6>
+        <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
+      </p>
+    </div>
+  </div>
 
+  <h2 class="mainprofile">Momements</h2>
+  <div data-ng-repeat = "story in ProfileShowViewModel.stories | orderBy: '-created_at'">
+    <div class="card_panel #ffb74d orange lighten-2 hoverable">
+      <div class="col s12 m2">
+        <p class="z-depth-3">
+          <p>{{story.content}}</p>
+          <span ng-bind> {{story.updated_at | date:'medium'}}</span>
+          <span>Last Updated: {{story.updated_at | date:'medium'}}</span></br>
+          <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.stories.id})">Update</a>
+          <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Delete Comment</a>
+        </p>
+      </div>
+    </div>
+  </div>
 
+  <h2 class="mainprofile">Add moments</h2>
 
-<h2>Add moments</h2>
+  <form name="momentsForm" ng-submit="MomentsNewController()">
+    <input placeholder="Share your moment" data-ng-model="ProfileShowViewModel.story.content" />
+    <button class="waves-effect waves-light btn" type="button" data-ng-click="ProfileShowViewModel.create()">Create</button>
+  </form>
 
-<div data-ng-repeat = "story in ProfileShowViewModel.stories | orderBy: '-created_at'">
-  {{story.content}}
 </div>
-
-<form name="momentsForm" ng-submit="MomentsNewController()">
-  <input placeholder="Share your moment" data-ng-model="ProfileShowViewModel.story.content" />
-  <button type="button" data-ng-click="ProfileShowViewModel.create()">Create</button>
-</form>
-
-<a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
-
-
-
-
-
-
-<!-- add edit ability here -->

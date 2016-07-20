@@ -1,4 +1,7 @@
-<h2>Edit Profiles</h2>
+<link rel="stylesheet" type="text/css" href="stylesheet/show.css">
+
+<div class="show container">
+<h2>Edit {{ProfileEditViewModel.profile.name}}'s Profile</h2>
 
 
 
@@ -11,7 +14,8 @@
   <p>School: <input value="ProfileEditViewModel.profile.school" data-ng-model="ProfileEditViewModel.profile.school" /> </p>
   <p>Description: <input value="ProfileEditViewModel.profile.description" data-ng-model="ProfileEditViewModel.profile.description" /> </p>
   <p>Photo Url: <input value="ProfileEditViewModel.profile.profile_pic_url" data-ng-model="ProfileEditViewModel.profile.profile_pic_url" /></p>
-  <button type="button" data-ng-click="ProfileEditViewModel.update()">Update</button>
 
-  <button type="button" data-ng-click="ProfileEditViewModel.destroy()">Delete Profile</button>
+  <button class="btn" type="button" data-ng-click="ProfileEditViewModel.update()">Update</button>
+  <button class="btn" type="button" data-ng-click="ProfileEditViewModel.destroy()">Delete Profile</button>
 </form>
+</div>

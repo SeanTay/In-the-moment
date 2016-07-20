@@ -1,5 +1,15 @@
 
 
+Tues:
+radio css: add edit button into box
+
+
+* comment css boxes
+* place text across top
+* timestamps angular
+* search feature
+
+
 Monday:
 * working prototype of angular, not connected using seed JSON data
 * put waterfall video on welcome page
