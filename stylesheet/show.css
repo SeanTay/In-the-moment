@@ -1,6 +1,7 @@
 
 html, body {
-  padding: 10px;
+  padding-bottom: 10px;
+  background-color: #fff3e0;
 }
 
 .container {
@@ -22,6 +23,7 @@ html, body {
 }
 
 .card_panel.hoverable {
+  background-color: #ff8a65;
   margin-left: 20px;
   margin-right: 80px;
   margin-top: 20px;
