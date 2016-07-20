@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="stylesheet/show.css">
+
 <div class="card_panel hoverable">
 <div class="col s12 m2">
 <p class="z-depth-3 flow-text">
@@ -9,6 +11,8 @@
   <h6>About me: {{ProfileShowViewModel.profile.desription}}</h6>
   <img class="circle responsive img" data-ng-src={{ProfileShowViewModel.profile.profile_pic_url}}>
     </div>
+  <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
+
 </p>
 </div>
 </div>
@@ -21,6 +25,7 @@
   <p>{{story.content}}</p>
   <span ng-bind> {{story.updated_at | date:'medium'}}</span>
     <span>Last Updated: {{story.updated_at | date:'medium'}}</span></br>
+    <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
   </p>
   </div>
   </div>
@@ -32,9 +37,6 @@
   <input placeholder="Share your moment" data-ng-model="ProfileShowViewModel.story.content" />
   <button class="waves-effect waves-light btn" type="button" data-ng-click="ProfileShowViewModel.create()">Create</button>
 </form>
-
-<a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
-
 
 
 
