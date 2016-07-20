@@ -27,6 +27,10 @@
           <span>Last Updated: {{story.updated_at | date:'medium'}}</span></br>
           <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.stories.id})">Update</a>
           <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Delete Comment</a>
+          <button class="btn" data-ng-click="like = like + 1" ng-init="0">&hearts;</button>
+            <span>likes: {{like}}</span>
+            <div class="edit-form" data-ng-show="story.ProfileEditViewModel">
+          </div>
         </p>
       </div>
     </div>
