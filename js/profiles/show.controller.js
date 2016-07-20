@@ -13,6 +13,7 @@
 
   function ProfileShowFunction(ProfileFactory, StoryFactory, $stateParams, $state){
     console.log("profile function");
+
     this.profile = ProfileFactory.get({id: $stateParams.id });
 
     this.stories = StoryFactory.query({id: $stateParams.id});
@@ -20,6 +21,7 @@
     this.story = new StoryFactory();
 
     this.create = function(){
+      this.story.profile_id = $stateParams.id
       this.story.$save({id: $stateParams.id}).then(function(){
         $state.go("ProfileShow", {}, {reload:true});
       })

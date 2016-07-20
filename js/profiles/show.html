@@ -38,9 +38,11 @@
 
   <h2 class="mainprofile">Add moments</h2>
 
-  <form name="momentsForm" ng-submit="MomentsNewController()">
+
+  {{ProfileShowViewModel.profile.id}}
+  <form name="momentsForm">
     <input placeholder="Share your moment" data-ng-model="ProfileShowViewModel.story.content" />
-    <input placeholder="id" data-ng-model="ProfileShowViewModel.story.profile_id" />
+    <!-- <input data-ng-value={{ProfileShowViewModel.profile.id}} data-ng-model="ProfileShowViewModel.story.profile_id"/> -->
     <button class="waves-effect waves-light btn" type="button" data-ng-click="ProfileShowViewModel.create()">Create</button>
   </form>
 
