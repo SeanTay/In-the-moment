@@ -29,8 +29,9 @@
           <p>{{story.content}}</p>
           <span ng-bind> {{story.updated_at | date:'medium'}}</span>
           <span>Last Updated: {{story.updated_at | date:'medium'}}</span></br>
-          <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.stories.id})">Update</a>
-          <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Delete Comment</a>
+
+          <a class="btn" type="button" data-ng-click="ProfileShowViewModel.update(story)">Update</a>
+          <a class="btn" type="button" data-ng-click="ProfileShowViewModel.destroy()">Delete Comment</a>
         </p>
       </div>
     </div>
@@ -39,7 +40,6 @@
   <h2 class="mainprofile">Add moments</h2>
 
 
-  {{ProfileShowViewModel.profile.id}}
   <form name="momentsForm">
     <input placeholder="Share your moment" data-ng-model="ProfileShowViewModel.story.content" />
     <!-- <input data-ng-value={{ProfileShowViewModel.profile.id}} data-ng-model="ProfileShowViewModel.story.profile_id"/> -->
