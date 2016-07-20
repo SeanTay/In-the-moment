@@ -14,24 +14,38 @@
         <p>{{ProfileShowViewModel.profile.school}}</p>
         <p>{{ProfileShowViewModel.profile.work}}</p>
 
-        <h6>About me: {{ProfileShowViewModel.profile.desription}}</h6>
+        <h6>{{ProfileShowViewModel.profile.description}}</h6>
         <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
         <a class="btn" data-ui-sref="ProfileShow({id: ProfileShowViewModel.nextpage.id})">Next</a>
+        <a ng-show="like"class="btn cus1" data-ng-click="like=!like" ng-init="0">&hearts;</a>
+        <a ng-hide="like" class="btn cus2" data-ng-click="like=!like" ng-init="0">&hearts;</a>
       </p>
     </div>
   </div>
 
   <h2 class="mainprofile">Moments</h2>
   <div data-ng-repeat = "story in ProfileShowViewModel.stories | filter:{'profile_id':ProfileShowViewModel.profile.id}:true |orderBy: '-created_at'">
-    <div class="card_panel #ffb74d orange lighten-2 hoverable">
+
+
+    <div class="card_panel #ffb74d orange lighten-2 hoverable"  >
       <div class="col s12 m2">
         <p class="z-depth-3">
+          <div class = "hideclass" data-ng-hide="edit">
           <p>{{story.content}}</p>
           <span ng-bind> {{story.updated_at | date:'medium'}}</span>
           <span>Last Updated: {{story.updated_at | date:'medium'}}</span></br>
+          <a class="btn" type="button" data-ng-click="edit=!edit">Edit</a>
+          </div>
+          <div data-ng-show="edit">
+            <form class = "card_panel" data-ng-submit="ProfileShowViewModel.story.content.update(story)">
+            <input value= {{story.content}} data-ng-model="story.content">
+            <a class="btn" type="button" data-ng-click= "edit=!edit">Cancel Edit</a>
+            <a class="btn" type="button" data-ng-click="ProfileShowViewModel.update(story)">Update</a>
+            <a class="btn" type="button" data-ng-click="ProfileShowViewModel.destroy(story)">Delete Comment</a>
+            </form>
 
-          <a class="btn" type="button" data-ng-click="ProfileShowViewModel.update(story)">Update</a>
-          <a class="btn" type="button" data-ng-click="ProfileShowViewModel.destroy()">Delete Comment</a>
+          </div>
+
         </p>
       </div>
     </div>

@@ -22,10 +22,16 @@
 
     this.create = function(){
       this.story.profile_id = $stateParams.id
-      this.story.$save({id: $stateParams.id}).then(function(){
+      this.story.$save({profile_id: $stateParams.id}).then(function(){
         $state.go("ProfileShow", {}, {reload:true});
       })
     }
+
+    // this.create = function(){
+    //   this.story.$save({profie_id: $stateParams.id}).then(function(){
+    //     $state.go("ProfileShow", {}, {reload:true});
+    //   })
+    // }
 
     var vm= this;
     ProfileFactory.query().$promise.then(function(profiles){
@@ -34,7 +40,6 @@
       console.log("nextpage")
     })
 
-    // this.getstory =
 
     this.update = function(story){
       story.$update({profile_id: $stateParams.id,id: story.id}).then(function(){
@@ -42,8 +47,8 @@
       })
     }
 
-    this.destroy = function(){
-      this.story.$delete({id: $stateParams.id}).then(function(){
+    this.destroy = function(story){
+      this.story.$delete({profile_id: $stateParams.id,id: story.id}).then(function(){
         console.log("delete function working")
         $state.go("ProfileShow",{id: $stateParams.id},{reload:true})
       })
