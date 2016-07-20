@@ -14,10 +14,9 @@
         <p>{{ProfileShowViewModel.profile.school}}</p>
         <p>{{ProfileShowViewModel.profile.work}}</p>
 
-        <h6>About me: {{ProfileShowViewModel.profile.desription}}</h6>
+        <h6>About me: {{ProfileShowViewModel.profile.desription}} &#9825;</h6>
         <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
         <button class="btn" data-ng-click="like = like + 1" ng-init="0">&hearts;</button>
-          <span>likes: {{like}}</span>
         <a class="btn" data-ui-sref="ProfileShow({id: ProfileShowViewModel.nextpage.id})">Next</a>
 
       </p>
