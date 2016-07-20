@@ -3,6 +3,11 @@ html, body {
   padding: 10px;
 }
 
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
 .btn {
   background-color: #4386fc;
   color: #fff;
@@ -10,6 +15,10 @@ html, body {
   font-weight: 300;
   text-decoration: none;
   padding: 0px 26px;
+}
+
+.mainprofile {
+  text-align: center;
 }
 
 .card_panel.hoverable {
