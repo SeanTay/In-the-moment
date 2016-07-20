@@ -4,14 +4,29 @@
   angular
   .module("datingApp", [
     "ui.router",
+    "ng-token-auth",
     "profiles"
   ])
   .config(["$stateProvider",
   RouterFunction
 ])
 
+  .config(["$authProvider", AuthConfigFunction])
+
+function AuthConfigFunction($authProvider) {
+   $authProvider.configure({
+     apiUrl: "http://localhost:3000"
+   });
+}
+
 function RouterFunction($stateProvider){
   $stateProvider
+    .state("signin", {
+      url: "/signin",
+      templateUrl: "js/users/signin.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
+    })
     .state("WelcomePage", {
       url: "",
       templateUrl: "welcome.html",
@@ -36,5 +51,17 @@ function RouterFunction($stateProvider){
       controller: "ProfileShowController",
       controllerAs: "ProfileShowViewModel"
     })
+    .state("signout", {
+      url: "/signout",
+      templateUrl: "js/users/signout.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
+    })
+    .state("signup", {
+      url: "/signup",
+      templateUrl: "js/users/signup.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
+    });
 };
 }());
