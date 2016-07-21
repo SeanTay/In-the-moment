@@ -43,3 +43,7 @@ html, body {
 .btn.cus2 {
   background-color: #4386fc;
 }
+
+.btn.cus3 {
+  margin-left: 10px;
+}
