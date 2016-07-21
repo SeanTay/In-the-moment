@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-	<link rel='stylesheet' href='welcome.css'/>
-	<title>In The Moment</title>
-</head>
 
-<body>
-	<div class="main">
-		<video autoplay muted loop>
-			<source src="love.mp4" type="video/mp4">
-			</video>
-			<div class="content container">
-				<h1>Striking a Balance</h1>
-				<p>
-					<a class="btn"	href="#">Get In The Moment</a>
-				</p>
-			</div>
-		</div>
-		<div class="footer">
-			<div class="container">
-				<p>&copy; In The Moment</p>
-			</div>
-		</div>
-	</body>
+  <link rel="stylesheet" type="text/css" href="stylesheet/welcome.css">
 
-	</html>
+<div class="main">
+  <video autoplay muted loop>
+    <source src="love.mp4" type="video/mp4">
+    </video>
+    <div class="content container" >
+      <h1>In The Moment</h1>
+      <p>
+        <!-- <a class="btn" data-ui-sref="ProfileShow({id: WelcomeControllerViewModel.profile.id})">Get In The Moment</a>
+        <a class="btn" data-ui-sref="signin">Sign In</a> -->
+        <a class="btn" data-ui-sref="ProfileNew">Create New Profile</a>
+        <a class = "btn" data-ui-sref="signup">Sign Up</a>
+        <a class = "btn" data-ui-sref="signin">Sign In</a>
+      </p>
+    </div>
+  </div>

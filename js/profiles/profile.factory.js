@@ -6,7 +6,7 @@ angular
   .factory("ProfileFactory", ["$resource", ProfileFactoryFunction]);
 
 function ProfileFactoryFunction($resource){
-  return $resource("http://localhost:3000/profiles/:id", {}, {
+  return $resource("https://group7-datingapp.herokuapp.com/profiles/:id", {}, {
         update: { method: "PUT" }
   });
 }

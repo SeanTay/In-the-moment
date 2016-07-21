@@ -2,24 +2,35 @@
 
 <html data-ng-app="datingApp">
 <head>
-  <title>Dating Angular App!</title>
+  <title>In the Momement</title>
+
+  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'> -->
+  <!-- <link rel='stylesheet' href='stylesheet/welcome.css'/> -->
+  <link rel="stylesheet" type="text/css" href="stylesheet/show.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
-
-    <script src="js/app.js"></script>
-    <script src="js/profiles/profiles.js"></script>
-    <script src="js/profiles/profile.factory.js"></script>
-    <script src="js/profiles/show.controller.js"></script>
-    <script src="js/profiles/new.controller.js"></script>
-    <script src="js/profiles/story.factory.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookie/4.0.9/angular-cookie.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-token-auth/0.0.28/ng-token-auth.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/profiles/profiles.js"></script>
+  <script src="js/profiles/profile.factory.js"></script>
+  <script src="js/profiles/show.controller.js"></script>
+  <script src="js/profiles/new.controller.js"></script>
+  <script src="js/profiles/edit.controller.js"></script>
+  <script src="js/profiles/story.factory.js"></script>
+  <script src="js/profiles/welcome.controller.js"></script>
+  <script src="js/users/sessions.controller.js"></script>
+  <script src="js/nav/auth.directive.js"></script>
 </head>
+
 <body>
-  <h1> Main page </h1>
+  <main data-ui-view></main>
+</body>
 
-
-  <main data-ui-view><main>
-
-  </body>
-
-  </html>
+</html>

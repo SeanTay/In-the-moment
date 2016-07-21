@@ -1,0 +1,51 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
+
+html, body {
+  padding-bottom: 10px;
+  background-color: #fff3e0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.btn {
+  background-color: #4386fc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  padding: 0px 26px;
+}
+
+.mainprofile {
+  text-align: center;
+}
+
+.card_panel.hoverable {
+  background-color: #ff8a65;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.circle.responsive.img {
+  height: 300px;
+  width: 300px;
+  margin-top: 30px;
+}
+
+.btn.cus1 {
+  background-color: red;
+}
+
+.btn.cus2 {
+  background-color: #4386fc;
+}
+
+.btn.cus3 {
+  margin-left: 10px;
+}
