@@ -1,7 +1,9 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
 
 html, body {
   padding-bottom: 10px;
   background-color: #fff3e0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container {
