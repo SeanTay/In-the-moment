@@ -12,9 +12,9 @@
 
       this.profile = new ProfileFactory();
 
+
       this.create = function(){
         this.profile.$save()
-        console.log("creating a profile")
       }
     }
 }());
