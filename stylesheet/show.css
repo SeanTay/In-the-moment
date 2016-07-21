@@ -34,3 +34,11 @@ html, body {
   height: 300px;
   width: 300px;
 }
+
+.btn.cus1 {
+  background-color: red;
+}
+
+.btn.cus2 {
+  background-color: #4386fc;
+}
