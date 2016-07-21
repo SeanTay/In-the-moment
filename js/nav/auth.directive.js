@@ -3,7 +3,7 @@
     .module("datingApp")
     .directive("authNav", function($auth) {
       return {
-        templateUrl: "js/nav/_auth.html",
+        templateUrl: "js/nav/auth.html",
         replace: true,
         restrict: 'E',
         link: function(scope) {
