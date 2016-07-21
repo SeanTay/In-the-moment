@@ -15,7 +15,7 @@
 
 function AuthConfigFunction($authProvider) {
    $authProvider.configure({
-     apiUrl: "http://group7-datingapp.herokuapp.com"
+     apiUrl: "https://group7-datingapp.herokuapp.com"
    });
 }
 
