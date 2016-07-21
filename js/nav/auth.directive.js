@@ -3,9 +3,10 @@
     .module("datingApp")
     .directive("authNav", function($auth) {
       return {
-        templateUrl: "js/nav/_auth.html",
+
         replace: true,
         restrict: 'E',
+        templateUrl: "js/nav/_auth.html",
         link: function(scope) {
           // update scope/view on successful signin
           scope.$on('auth:login-success', function(ev, user) {

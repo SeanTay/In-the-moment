@@ -22,7 +22,7 @@
     <a ng-hide="like" class="btn cus2" data-ng-click="like=!like" ng-init="0">&hearts;</a>
   </div>
 
-  <h2 class="mainprofile">Moments</h2>
+  <h2 class="mainprofile" data-ng-if="ProfileShowViewModel.stories.content.length > 0">Moments</h2>
   <div data-ng-repeat = "story in ProfileShowViewModel.stories | filter:{'profile_id':ProfileShowViewModel.profile.id}:true |orderBy: '-created_at'">
 
 
@@ -36,7 +36,7 @@
             <a class="btn" type="button" data-ng-click="edit=!edit">Edit</a>
           </div>
           <div data-ng-show="edit">
-            <form class = "card_panel" data-ng-submit="ProfileShowViewModel.story.content.update(story)">
+            <form class = "card_panel" data-ng-submit="ProfileShowViewModel.profile.content.update(story)">
               <input value= {{story.content}} data-ng-model="story.content">
               <a class="btn" type="button" data-ng-click= "edit=!edit">Cancel Edit</a>
               <a class="btn" type="button" data-ng-click="ProfileShowViewModel.update(story)">Update</a>
@@ -47,6 +47,8 @@
       </div>
     </div>
   </div>
+
+  <h2 class="mainprofile" data-ng-if="ProfileShowViewModel.story.id.length > 0">{{ProfileShowViewModel.story.content.length}}Moments</h2>
 
   <h2 class="mainprofile">Add moments</h2>
 
