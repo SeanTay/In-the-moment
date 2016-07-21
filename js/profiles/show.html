@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="stylesheet/show.css">
 
 <div class="show container">
-  <div class="card_panel hoverable">
+  <div class="card_panel hoverable" style="text-align:center">
     <div class="col s12 m2 mainprofile">
       <img class="circle responsive img" data-ng-src={{ProfileShowViewModel.profile.profile_pic_url}}>
       <p class="z-depth-3 flow-text">
@@ -13,23 +13,13 @@
 
         <p>{{ProfileShowViewModel.profile.school}}</p>
         <p>{{ProfileShowViewModel.profile.work}}</p>
-
-<<<<<<< HEAD
-        <h6>About me: {{ProfileShowViewModel.profile.desription}} &#9825;</h6>
-=======
-        <h6>{{ProfileShowViewModel.profile.description}}</h6>
->>>>>>> 3f9c96f1486d9ff6e8689ff1fd88369fc5b1aab5
-        <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
-        <button class="btn" data-ng-click="like = like + 1" ng-init="0">&hearts;</button>
-        <a class="btn" data-ui-sref="ProfileShow({id: ProfileShowViewModel.nextpage.id})">Next</a>
-<<<<<<< HEAD
-
-=======
-        <a ng-show="like"class="btn cus1" data-ng-click="like=!like" ng-init="0">&hearts;</a>
-        <a ng-hide="like" class="btn cus2" data-ng-click="like=!like" ng-init="0">&hearts;</a>
->>>>>>> 3f9c96f1486d9ff6e8689ff1fd88369fc5b1aab5
+        <h6>About me: {{ProfileShowViewModel.profile.desription}}</h6>
       </p>
     </div>
+    <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
+    <a class="btn" data-ui-sref="ProfileShow({id: ProfileShowViewModel.nextpage.id})">Next</a>
+    <a ng-show="like"class="btn cus1" data-ng-click="like=!like" ng-init="0">&hearts;</a>
+    <a ng-hide="like" class="btn cus2" data-ng-click="like=!like" ng-init="0">&hearts;</a>
   </div>
 
   <h2 class="mainprofile">Moments</h2>
@@ -40,28 +30,19 @@
       <div class="col s12 m2">
         <p class="z-depth-3">
           <div class = "hideclass" data-ng-hide="edit">
-          <p>{{story.content}}</p>
-          <span data-ng-bind> {{story.updated_at | date:'medium'}}</span>
-          <span>Last Updated: {{story.updated_at | date:'medium'}}</span></br>
-<<<<<<< HEAD
-          <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.stories.id})">Update</a>
-          <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Delete Comment</a>
-            <div class="edit-form" data-ng-show="story.ProfileEditViewModel">
-          </div>
-=======
-          <a class="btn" type="button" data-ng-click="edit=!edit">Edit</a>
+            <p>{{story.content}}</p>
+            <span data-ng-bind> {{story.updated_at | date:'medium'}}</span>
+            <span>Last Updated: {{story.updated_at | date:'medium'}}</span></br>
+            <a class="btn" type="button" data-ng-click="edit=!edit">Edit</a>
           </div>
           <div data-ng-show="edit">
             <form class = "card_panel" data-ng-submit="ProfileShowViewModel.story.content.update(story)">
-            <input value= {{story.content}} data-ng-model="story.content">
-            <a class="btn" type="button" data-ng-click= "edit=!edit">Cancel Edit</a>
-            <a class="btn" type="button" data-ng-click="ProfileShowViewModel.update(story)">Update</a>
-            <a class="btn" type="button" data-ng-click="ProfileShowViewModel.destroy(story)">Delete Comment</a>
+              <input value= {{story.content}} data-ng-model="story.content">
+              <a class="btn" type="button" data-ng-click= "edit=!edit">Cancel Edit</a>
+              <a class="btn" type="button" data-ng-click="ProfileShowViewModel.update(story)">Update</a>
+              <a class="btn" type="button" data-ng-click="ProfileShowViewModel.destroy(story)">Delete Comment</a>
             </form>
-
           </div>
-
->>>>>>> 3f9c96f1486d9ff6e8689ff1fd88369fc5b1aab5
         </p>
       </div>
     </div>

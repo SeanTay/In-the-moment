@@ -1,7 +1,8 @@
 
 
-Tues:
-radio css: add edit button into box
+Thur:
+* add css to nav bar, sign up page
+* no comments yet item?
 
 
 * comment css boxes
