@@ -15,6 +15,7 @@
 
       this.create = function(){
         this.profile.$save()
+        // NHO: could be a good idea to reset this.profile
       }
     }
 }());

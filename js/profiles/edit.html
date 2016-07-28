@@ -1,8 +1,10 @@
+<!-- NHO: don't think this will as expected considering this be render in the document's body  -->
 <link rel="stylesheet" type="text/css" href="stylesheet/show.css">
 
 <div class="show container">
   <h2>Edit {{ProfileEditViewModel.profile.name}}'s Profile</h2>
 
+    <!-- NHO: a lot of this code is duplicated by whats in `new.html`. How could you make this DRY?  -->
   <form name="profileForm" data-ng-submit="ProfileEditController()">
     <p>Name: <input value="ProfileEditViewModel.profile.name" data-ng-model="ProfileEditViewModel.profile.name" /></p>
     <p>Gender: <input value="ProfileEditViewModel.profile.gender" data-ng-model="ProfileEditViewModel.profile.gender" /></p>

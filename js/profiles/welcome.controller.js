@@ -2,7 +2,7 @@
 
 (function(){
   angular
-    .module( "profiles" )
+    .module( "profiles" ) // NHO: could consider attaching to main app module to preserve seperation of concerns with "profiles"
     .controller( "WelcomeController", ["ProfileFactory", WelcomeControllerFunction])
 
     function WelcomeControllerFunction(ProfileFactory){
