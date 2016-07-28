@@ -12,8 +12,9 @@
             scope.currentUser = user;
           });
 
+          // NHO: would recommend some error handling for unsuccessful logins / signups
           scope.$on('auth:logout-success', function(ev, user) {
-            scope.currentUser = false;
+            scope.currentUser = false; // NHO: or undefined / null
           });
 
           scope.$on('auth:registration-email-success', function(ev, user) {

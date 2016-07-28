@@ -16,8 +16,10 @@
         <h6>About me: {{ProfileShowViewModel.profile.description}}</h6>
       </p>
     </div>
+    <!-- NHO: could consider using some logic to only show this based on the current user  -->
     <a class="btn" data-ui-sref="ProfileEdit({id: ProfileShowViewModel.profile.id})">Edit Profile</a>
     <a class="btn" data-ui-sref="ProfileShow({id: ProfileShowViewModel.nextpage.id})">Next</a>
+    <!-- NHO: is this functionality working?  -->
     <a ng-show="like"class="btn cus1" data-ng-click="like=!like" ng-init="0">&hearts;</a>
     <a ng-hide="like" class="btn cus2" data-ng-click="like=!like" ng-init="0">&hearts;</a>
   </div>
@@ -25,12 +27,13 @@
   <h2 class="mainprofile">Moments</h2>
   <div data-ng-repeat = "story in ProfileShowViewModel.stories | filter:{'profile_id':ProfileShowViewModel.profile.id}:true |orderBy: '-created_at'">
 
-
+    <!-- NHO: nice job on the UI -> Materialize ftw!  -->
     <div class="card_panel #ffb74d orange lighten-2 hoverable"  >
       <div class="col s12 m2">
         <p class="z-depth-3">
           <div class = "hideclass" data-ng-hide="edit">
             <p>{{story.content}}</p>
+            <!-- NHO: why do you need ng-bind here?  -->
             <span data-ng-bind> {{story.updated_at | date:'medium'}}</span>
             <span>Last Updated: {{story.updated_at | date:'medium'}}</span></br>
             <a class="btn" type="button" data-ng-click="edit=!edit">Edit</a>
@@ -53,6 +56,7 @@
 
   <form name="momentsForm">
     <input placeholder="Share your moment" data-ng-model="ProfileShowViewModel.story.content" />
+    <!-- NHO: what are you trying to do here? Might consider leaving unused code on a seperate branch  -->
     <!-- <input data-ng-value={{ProfileShowViewModel.profile.id}} data-ng-model="ProfileShowViewModel.story.profile_id"/> -->
     <button class="waves-effect waves-light btn" type="button" data-ng-click="ProfileShowViewModel.create()">Create</button>
   </form>
